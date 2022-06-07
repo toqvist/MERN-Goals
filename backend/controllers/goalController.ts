@@ -3,7 +3,7 @@ import asyncHandler from 'express-async-handler';
 //@desc Get goals
 //@route GET /api/goals
 //@access Private
-export const getGoals = asyncHandler(async (req, res) => {
+export const getGoals = asyncHandler(async (req:any, res:any) => {
 
     res.status(200).json({ message: "Get goals" })
 })
@@ -11,7 +11,7 @@ export const getGoals = asyncHandler(async (req, res) => {
 //@desc Get goals
 //@route POST /api/goals
 //@access Private
-export const setGoal = asyncHandler(async (req, res) => {
+export const setGoal = asyncHandler(async (req:any, res:any) => {
     
     if(!req.body.text) {
         res.status(400)
@@ -24,7 +24,7 @@ export const setGoal = asyncHandler(async (req, res) => {
 //@desc Update goal
 //@route PUT /api/goals/:id
 //@access Private
-export const updateGoal = asyncHandler(async (req, res) => {
+export const updateGoal = asyncHandler(async (req:any, res:any) => {
 
     res.status(200).json({message: `Update goal ${req.params.id}`})
 
@@ -33,7 +33,7 @@ export const updateGoal = asyncHandler(async (req, res) => {
 //@desc Get goals
 //@route DELETE /api/goals/:id
 //@access Private
-export const deleteGoal = asyncHandler(async (req, res) => {
+export const deleteGoal = asyncHandler(async (req:any, res:any) => {
     res.status(200).json({message: `Delete goal ${req.params.id}`})
 
 })
